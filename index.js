@@ -1,7 +1,9 @@
+const css = require('css');
+
 module.exports = function (source) {
   this.cacheable();
 
-  console.log('source', source);
+  const ast = css.parse(source);
 
-  return source;
+  return css.stringify(ast);
 };
