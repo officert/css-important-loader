@@ -1,5 +1,5 @@
 {
-  "name": "@tablelist/css-important-loader",
+  "name": "cssimportant-loader",
   "version": "0.0.2",
   "description": "Webpack Css Loader to add !important to all styles",
   "main": "index.js",
