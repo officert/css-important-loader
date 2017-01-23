@@ -9,7 +9,7 @@ module.exports = function (source) {
     console.log('rule', rule);
 
     if (rule.type === 'rule' && rule.declarations && rule.declarations.length) {
-      rul.declarations.forEach(declaration => {
+      rule.declarations.forEach(declaration => {
         console.log('declaration before', declaration.value);
 
         if (!declaration.value.endsWith('!important')) {
