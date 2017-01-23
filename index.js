@@ -6,7 +6,9 @@ module.exports = function (source) {
   const ast = css.parse(source);
 
   ast.stylesheet.rules.forEach(rule => {
-    if (rule.type === 'rule') {
+    console.log('rule', rule);
+
+    if (rule.type === 'rule' && rule.value) {
       console.log('rule before', rule.value);
 
       if (!rule.value.endsWith('!important')) {
