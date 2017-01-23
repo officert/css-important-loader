@@ -61,7 +61,7 @@ will return this CSS:
 }
 ```
 
-### Running TEsts
+### Running Tests
 
 ```sh
 npm run test
