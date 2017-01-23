@@ -1,6 +1,6 @@
 {
   "name": "cssimportant-loader",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Webpack Css Loader to add !important to all styles",
   "main": "index.js",
   "scripts": {
