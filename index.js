@@ -10,13 +10,15 @@ module.exports = function (source) {
 
     if (rule.type === 'rule' && rule.declarations && rule.declarations.length) {
       rule.declarations.forEach(declaration => {
-        console.log('declaration before', declaration.value);
+        if (declaration.type === 'declaration') {
+          console.log('declaration before', declaration.value);
 
-        if (!declaration.value.endsWith('!important')) {
-          declaration.value += ' !important';
+          if (!declaration.value.endsWith('!important')) {
+            declaration.value += ' !important';
+          }
+
+          console.log('declaration after', declaration.value);
         }
-
-        console.log('declaration after', declaration.value);
       });
     }
   });
