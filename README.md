@@ -1,4 +1,4 @@
-# css-important-loader
+# cssimportant-loader
 [Webpack](https://webpack.github.io/docs/) CSS Loader to add !important to all styles
 
 [Cleanslate CSS](http://cleanslatecss.com/usage/) is an aggressive CSS reset. To use it you need to add `!important` to all of your styles.
