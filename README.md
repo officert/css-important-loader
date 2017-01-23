@@ -27,3 +27,30 @@ module.exports = {
 ```js
 import css from 'file.css';
 ```
+### Example
+
+given this CSS:
+
+```css
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #EFEFEF;
+}
+```
+
+will return this CSS:
+
+```css
+.modal-bg {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  background: #EFEFEF !important;
+}
+```
