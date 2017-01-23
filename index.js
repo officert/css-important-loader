@@ -8,14 +8,16 @@ module.exports = function (source) {
   ast.stylesheet.rules.forEach(rule => {
     console.log('rule', rule);
 
-    if (rule.type === 'rule' && rule.value) {
-      console.log('rule before', rule.value);
+    if (rule.type === 'rule' && rule.declarations && rule.declarations.length) {
+      rul.declarations.forEach(declaration => {
+        console.log('declaration before', declaration.value);
 
-      if (!rule.value.endsWith('!important')) {
-        rule.value += ' !important';
-      }
+        if (!declaration.value.endsWith('!important')) {
+          declaration.value += ' !important';
+        }
 
-      console.log('rule after', rule.value);
+        console.log('declaration after', declaration.value);
+      });
     }
   });
 
