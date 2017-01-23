@@ -1,6 +1,6 @@
 # cssimportant-loader
 
-[![npm version](https://badge.fury.io/js/css-important-loader.svg)](https://badge.fury.io/js/css-important-loader)
+[![npm version](https://badge.fury.io/js/cssimportant-loader.svg)](https://badge.fury.io/js/cssimportant-loader)
 
 [Webpack](https://webpack.github.io/docs/) CSS Loader to add !important to all styles.
 
