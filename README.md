@@ -5,7 +5,7 @@ While using `!important` is typically frowned upon there are times when it can b
 
 This [Webpack](https://webpack.github.io/docs/) loader will add `!important` to all your styles so you can easily use Cleanslate, without having to manually add `important` everywhere.
 
-### Instal
+### Install
 
 ```sh
 npm install cssimportant-loader --save-dev
@@ -59,4 +59,10 @@ will return this CSS:
   width: 100% !important;
   background: #EFEFEF !important;
 }
+```
+
+### Running TEsts
+
+```sh
+npm run test
 ```
