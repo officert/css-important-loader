@@ -5,6 +5,12 @@ While using `!important` is typically frowned upon there are times when it can b
 
 This [Webpack](https://webpack.github.io/docs/) loader will add `!important` to all your styles so you can easily use Cleanslate, without having to manually add `important` everywhere.
 
+### Instal
+
+```sh
+npm install cssimportant-loader --save-dev
+```
+
 ### Usage
 
 *webpack.config.js*
