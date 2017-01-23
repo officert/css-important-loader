@@ -11,13 +11,13 @@ module.exports = function (source) {
     if (rule.type === 'rule' && rule.declarations && rule.declarations.length) {
       rule.declarations.forEach(declaration => {
         if (declaration.type === 'declaration') {
-          console.log('declaration before', declaration.value);
+          console.log('processing', declaration.type);
 
           if (!declaration.value.endsWith('!important')) {
             declaration.value += ' !important';
           }
-
-          console.log('declaration after', declaration.value);
+        } else {
+          console.log('skipping', declaration.type);
         }
       });
     }
