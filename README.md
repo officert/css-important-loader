@@ -1,7 +1,7 @@
 # cssimportant-loader
-[Webpack](https://webpack.github.io/docs/) CSS Loader to add !important to all styles
+[Webpack](https://webpack.github.io/docs/) CSS Loader to add !important to all styles.
 
-[Cleanslate CSS](http://cleanslatecss.com/usage/) is an aggressive CSS reset. To use it you need to add `!important` to all of your styles.
+While using `!important` is typically frowned upon there are times when it can be useful. When building widgets that will be embedded directly into third party websites (no iframe) the CSS rules in the host site may be unpredictable and cause CSS bleeding. [Cleanslate CSS](http://cleanslatecss.com/) is an aggressive CSS reset. To use it you need to add `!important` to all of your styles.
 
 This [Webpack](https://webpack.github.io/docs/) loader will add `!important` to all your styles so you can easily use Cleanslate, without having to manually add `important` everywhere.
 
