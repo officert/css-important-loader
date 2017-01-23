@@ -1,4 +1,7 @@
 # cssimportant-loader
+
+[![npm version](https://badge.fury.io/js/css-important-loader.svg)](https://badge.fury.io/js/css-important-loader)
+
 [Webpack](https://webpack.github.io/docs/) CSS Loader to add !important to all styles.
 
 While using `!important` is typically frowned upon there are times when it can be useful. When building widgets that will be embedded directly into third party websites (no iframe) the CSS rules in the host site may be unpredictable and cause CSS bleeding. [Cleanslate CSS](http://cleanslatecss.com/) is an aggressive CSS reset that can be used for this exact situation, however to use it you need to add `!important` to all of your styles to properly override it's resets with your own styles.
