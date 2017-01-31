@@ -34,7 +34,7 @@ describe('cssimportant-loader', () => {
   });
 
   describe('when passed valid css', () => {
-    describe('no rules with !important', () => {
+    describe('basic selectors', () => {
       const cssInput = `#selector1 {
         color: red;
         background: blue;
@@ -63,7 +63,40 @@ describe('cssimportant-loader', () => {
       });
     });
 
-    describe('rules with !important', () => {
+    describe('media queries', () => {
+      const cssInput = `@media(min-width: 900px) {
+        #selector1 {
+          color: red;
+          background: blue;
+        }
+
+        .selector2 {
+          color: green;
+          font-size: 200px;
+        }
+      }`;
+
+      const cssExpectedOutput = parseAndFormatCSS(`@media(min-width: 900px) {
+        #selector1 {
+          color: red !important;
+          background: blue !important;
+        }
+
+        .selector2 {
+          color: green !important;
+          font-size: 200px !important;
+        }
+      }`);
+
+      it('should modify all the css rules with !important', () => {
+        const result = cssimportantLoader(cssInput);
+
+        should.exist(result);
+        result.should.equal(cssExpectedOutput);
+      });
+    });
+
+    describe('!important', () => {
       const cssInput = `#selector1 {
           color: red !important;
           background: blue !important;
