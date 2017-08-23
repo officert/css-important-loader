@@ -63,6 +63,27 @@ describe('cssimportant-loader', () => {
       });
     });
 
+    describe('empty selector', () => {
+      const cssInput = `#componentName {
+      }
+
+      .componentName{
+      }`;
+
+      const cssExpectedOutput = parseAndFormatCSS(`#componentName {
+      }
+
+      .componentName{
+      }`);
+
+      it('should return the empty selectors', () => {
+        const result = cssimportantLoader(cssInput);
+
+        should.exist(result);
+        result.should.equal(cssExpectedOutput);
+      });
+    });
+
     describe('media queries', () => {
       const cssInput = `@media(min-width: 900px) {
         #selector1 {
@@ -127,8 +148,8 @@ describe('cssimportant-loader', () => {
   });
 });
 
-function parseAndFormatCSS(input) {
-  const ast = css.parse(input);
+function parseAndFormatCSS(source) {
+  const ast = css.parse(source);
 
   return css.stringify(ast);
 }
